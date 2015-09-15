@@ -10,6 +10,7 @@ class Pignon
   def ratio
     chaine / dent.to_f
   end
+  
   def pignon_inches
     ratio * roue.diametre
   end
@@ -33,7 +34,7 @@ class Roue
 end
 
 
-@wheel = Wheel.new(26, 1.5)
-puts @wheel.circumference
-puts Gear.new(52, 11, @wheel).gear_inches
-puts Gear.new(52, 11).ratio
+@roue = Roue.new(26, 1.5)
+puts @roue.circonference
+puts Pignon.new(52, 11, @roue).pignon_inches
+puts Pignon.new(52, 11).ratio

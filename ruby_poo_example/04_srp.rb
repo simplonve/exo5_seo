@@ -21,5 +21,4 @@ class Pignon
   end
 end
 
-
 # pignon should not be calculating roue diametre

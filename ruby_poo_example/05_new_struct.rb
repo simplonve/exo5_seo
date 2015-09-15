@@ -20,3 +20,6 @@ class Pignon
     end
   end
 end
+
+pignon_1 = Pignon.new(54, 42, 15, 75)
+puts pignon_1.roue.diametre

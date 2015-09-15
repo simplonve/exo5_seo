@@ -3,7 +3,7 @@ class Pignon
 
   def initialize(chaine, dent)
     @chaine = chaine
-    @dent = dent  # fr = dent
+    @dent = dent
   end
 
   def ratio
@@ -11,3 +11,4 @@ class Pignon
   end
 end
 
+pignon = Pignon.new(5,4)

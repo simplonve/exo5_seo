@@ -19,4 +19,7 @@ class Pignon
   end
 end
 
+puts Pignon.new(45, 7, 20, 86).pignon_inches
+
+
 # Oh ! but pignon_inches has more than one responsibility.

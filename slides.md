@@ -4,9 +4,14 @@
 Avril-Octobre 2015
 
 ///
-
 Sources : 
+
 Practical Object-Oriented Design in Ruby - by Sandy Metz
+
+
+![metz](images/metz.png "Metz")
+
+///
 http://rubylearning.com/satishtalim/tutorial.html
 https://en.wikibooks.org/wiki/A-level_Computing/AQA/Problem_Solving,_Programming,_Operating_Systems,_Databases_and_Networking/Programming_Concepts/Object-oriented_programming_(OOP)
 https://robots.thoughtbot.com/back-to-basics-polymorphism-and-ruby
@@ -16,8 +21,8 @@ https://robots.thoughtbot.com/back-to-basics-polymorphism-and-ruby
 
 ///
 
-- a design philosophy. 
-- Object Oriented Programming. 
+- Object Oriented Programming 
+- a design philosophy 
 - everything is grouped as self sustainable "objects"
 
 ///
@@ -34,7 +39,9 @@ A “hand”
 The “hand” is a class. <= Abstraction here !
 
 Your body has two objects of the type "hand" : 
-- "left hand" and "right hand"
+
+- "left hand"
+- "right hand"
 
 Functions are controlled by a set of electrical signals sent through your shoulders
 
@@ -48,9 +55,10 @@ The hand class is being reused to create the left hand and the right hand by **s
 A "thing" that can perform a set of related activities.
 
 The Hand (object) can grip something, 
+
 A Student (object) can give their name or address.
 
-An object is always an instance of a **class**.
+An object is **always** an instance of a **class**.
 
 ===
 ##What is a Class?
@@ -87,99 +95,76 @@ But you have SOLID
 
 SOLID are 5 principles that you must follow when design a class
 
-1. SRP - The Single Responsibility Principle
-A class should have one, and only one, reason to change.
+1 SRP - The Single Responsibility Principle
 
-2. OCP - The Open Closed Principle
-Should be able to extend any classes' behaviors, without modifying the classes.
+A class should have one, and only one, reason to change
 
-3. LSP - The Liskov Substitution Principle
+2 OCP - The Open Closed Principle
+
+Should be able to extend any classes' behaviors, without modifying the classes
+
+3 LSP - The Liskov Substitution Principle
+
 A subclass can be used anywhere its superclass would do
 
 ///
-4. ISP - The Interface Segregation Principle
-Make fine grained interfaces that are client specific.
+4 ISP - The Interface Segregation Principle
 
-5. DIP - The Dependency Inversion Principle
+Make fine grained interfaces that are client specific
+
+5 DIP - The Dependency Inversion Principle
+
 Depend on abstractions, not on concretions.
 
-///
+===
 
 ##To identify a class correctly
 
 - identify the full list of functions 
 - group each function to form classes 
 
-///
 
-##Divide and conquer
-
-Identify the module of the system first 
-Dig deep in to each module separately to seek out classes.
+##Divide and conquer !
 
 ===
-##How to manage classes of a software system
-
-and to reduce the complexity
-
-1. Encapsulation
-
-2. Inheritance
-
-3. Polymorphism
-
+Stop talking !
+##Show me some examples
 ===
 
-##Encapsulation
-(or Information Hiding)
+##Adavantages of SRP
 
-![encaps](images/encaps-interfaces.png "encaps")
-
-default in Ruby
-
-///
-
-Example : A Square has
-
-- a set of variables,
-- length 
-- and width
-
-only accessible by functions inside the object
+- Expose previously hidden qualities
+- Avoid the need for comments 
+- Encourage reuse
+- Are easy to move to another class 
 
 ///
-This concept reduces the chance of 'breaking' something when programming
-
-The object itself can directly manipulate its variables, so debugging problems is easier.
-
+Refactors are needed, not because the design is clear, but because it isn’t.
 ===
-##Inheritance
 
-Dont declare all the new stuff we wanted to add to an object
+##Exercice
 
-```rb
-class Mammal  
-  def breathe  
-    puts "inhale and exhale"  
-  end  
-end  
-  
-class Cat < Mammal  
-  def speak  
-    puts "Meow"  
-  end  
-end  
-  
-rani = Cat.new  
-rani.breathe  
-rani.speak
+À partir des commandes et résultats suivant, retrouver les classes à écrire.
+
+``` ruby
+player_1 = Player.new "Ryu"
+player_2 = Player.new "Ken"
+
+player_1.hp = 100
+player_1.force = 10
+
+player_2.hp = 200
+player_2.force = 5
+
+player_1.hit player_2
+# => Ken perd 10 hp !
+
+puts player_2.hp
+# => 190
+
+20.times do
+  player_2.hit player_1
+  # => Ryu perd 5 hp !
+end
+# => Ryu a perdu !
 ```
-
-===
-
-###Polymorphism
-
-Polymorphism describes a pattern in object oriented programming in which classes have different functionality while sharing a common interface.
-
-Being able to send the same message to different objects and get different results
-

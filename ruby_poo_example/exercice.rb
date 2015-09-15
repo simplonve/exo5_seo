@@ -1,4 +1,6 @@
 # À partir des commandes et résultats suivant, retrouver les classes à écrire.
+# A faire dans tous les languages que vous voulez évidemment, 
+# du moment que les consignes et les retours de méthodes sont respectés
 
 player_1 = Player.new "Ryu"
 player_2 = Player.new "Ken"

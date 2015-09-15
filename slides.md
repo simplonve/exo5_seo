@@ -49,6 +49,7 @@ Shoulder = interface
 
 The hand class is being reused to create the left hand and the right hand by **slightly** changing the properties of it.
 
+![interfaces](images/encaps-interfaces.png "interfaces")
 ===
 ##What is an Object?
 

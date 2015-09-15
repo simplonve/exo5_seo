@@ -6,7 +6,7 @@ Avril-Octobre 2015
 ///
 Sources : 
 
-Practical Object-Oriented Design in Ruby - by Sandy Metz
+Practical Object-Oriented Design in Ruby - by Sandi Metz
 
 
 ![metz](images/metz.png "Metz")
